@@ -9,6 +9,7 @@ pylint = "<2.0.0"
 [packages]
 requests = "*"
 schedule = "*"
+opencv-python = "*"
 
 [requires]
 python_version = "2.7"
