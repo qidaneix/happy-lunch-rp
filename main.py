@@ -6,7 +6,7 @@ import schedule
 import time
 
 def job():
-    r = requests.get('http://lunch.xiaodabao.xyz:7001/')
+    r = requests.get('http://lunch.xiaodabao.xyz/')
     print r.content
 
 schedule.every(10).seconds.do(job)
