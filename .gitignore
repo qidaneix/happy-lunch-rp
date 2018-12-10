@@ -104,4 +104,4 @@ venv.bak/
 .mypy_cache/
 
 # editor or IDE
-# .vscode/
+.vscode/
