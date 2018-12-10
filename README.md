@@ -21,10 +21,13 @@ sudo pip2 install pipenv
 
 3. install dependence
 ```bash
-sudo pipenv install schedule
+# install all
+sudo pipenv --two install
+# install one
+sudo pipenv --two install [package_name]
 ```
 
 4. run it
 ```bash
-pipenv run python main.py
+pipenv --two run python main.py
 ```
