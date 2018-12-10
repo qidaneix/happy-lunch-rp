@@ -1,8 +1,10 @@
 # happy-lunch-rp
-快乐午餐——树莓派
 
-## bash used
-1. install python2.7 and pip
+[妈妈再也不用担心我吃不上午饭了](http://lunch.xiaodabao.xyz/)
+
+## Project setup
+
+### install python2.7 and pip
 ```bash
 # refreshing the repositories
 sudo apt update
@@ -14,22 +16,27 @@ sudo apt upgrade
 sudo apt install python2.7 python-pip
 ```
 
-2. install pipenv
+### install pipenv
 ```bash
 sudo pip2 install pipenv
 ```
 
-3. install dependence
+### install dependence
 ```bash
-# install all packages include dev-packages
-sudo pipenv install --two --dev
-# install all packages exclude dev-packages
+# install all packages
 sudo pipenv install --two
+# install all dev-packages
+sudo pipenv install --two --dev
 # install one package
 sudo pipenv install [package_name] --two
 ```
 
-4. run it
+### check if usb webcam connected
 ```bash
-sudo pipenv run python main.py --two
+ls -ltrh /dev/video*
+```
+
+### run it
+```bash
+sudo pipenv --two run python main.py
 ```
