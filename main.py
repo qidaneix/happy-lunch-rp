@@ -9,9 +9,9 @@ import cv2
 
 cap = cv2.VideoCapture(0)
 # set the Horizontal resolution
-cap.set(cv2.CV_CAP_PROP_FRAME_WIDTH, 1280)
+cap.set(3, 1280)
 # Set the Vertical resolution
-cap.set(cv2.CV_CAP_PROP_FRAME_HEIGHT, 720)
+cap.set(4, 720)
 
 while (cap.isOpened()):
     def job():
@@ -52,3 +52,4 @@ while (cap.isOpened()):
         time.sleep(1)
 
 cap.release()
+ 
