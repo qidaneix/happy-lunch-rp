@@ -17,17 +17,17 @@ while (camera.isOpened()):
         # save the photo, use current time as name
         image_name = time.strftime('images/%Y-%m-%dT%H:%M:%S',time.localtime(time.time())) + '.jpg'
 
-        # rotate 180 degrees
         # get image height, width
         (h, w) = image.shape[:2
                             ]
         # calculate the center of the image
         center = (w / 2, h / 2)
         # Perform the counter clockwise rotation holding at the center
-        # 180 degrees
+        # rotate 180 degrees
         M = cv2.getRotationMatrix2D(center, 180, 1.0)
         rotated180 = cv2.warpAffine(image, M, (w, h))
 
+        # save the photo
         cv2.imwrite(image_name, rotated180)
         print(image_name + 'image written!')
 
