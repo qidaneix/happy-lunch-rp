@@ -7,12 +7,16 @@ import requests
 import schedule
 import cv2
 
-camera = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0)
+# set the Horizontal resolution
+cap.set(cv2.CV_CAP_PROP_FRAME_WIDTH, 1280)
+# Set the Vertical resolution
+cap.set(cv2.CV_CAP_PROP_FRAME_HEIGHT, 720)
 
-while (camera.isOpened()):
+while (cap.isOpened()):
     def job():
         # take a photo
-        return_value, image = camera.read()
+        return_value, image = cap.read()
         # save the photo, use current time as name
         image_name = time.strftime('images/%Y-%m-%dT%H:%M:%S',time.localtime(time.time())) + '.jpg'
 
@@ -47,4 +51,4 @@ while (camera.isOpened()):
         schedule.run_pending()
         time.sleep(1)
 
-camera.release()
+cap.release()
