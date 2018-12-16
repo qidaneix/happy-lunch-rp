@@ -52,4 +52,3 @@ while (cap.isOpened()):
         time.sleep(1)
 
 cap.release()
- 
