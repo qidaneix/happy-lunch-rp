@@ -20,7 +20,6 @@ sudo apt-get upgrade
 
 ### install dependence
 ```bash
-pip install numpy
 pip install requests
 pip install schedule
 ```
