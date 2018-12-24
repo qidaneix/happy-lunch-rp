@@ -34,12 +34,15 @@ while (cap.isOpened()):
         cv2.imwrite(image_name, image_rotated180)
         print(image_name + ' image written!')
 
-        # send a http request
-        url = 'http://lunch.xiaodabao.xyz/image'
-        files = {'file': open(image_name, 'rb')}
-        r = requests.post(url, files = files)
-        # handle http response
-        print(r.content)
+        try:
+            # send a http request
+            url = 'http://lunch.xiaodabao.xyz/image'
+            files = {'file': open(image_name, 'rb')}
+            r = requests.post(url, files = files)
+            # handle http response
+            print(r.content)
+        except:
+            pass
 
         # delete image
         os.remove(image_name)
